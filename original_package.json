@@ -9,7 +9,7 @@
     "clear": "node ./clear.js",
     "dev": "gulp",
     "dist": "gulp dist",
-    "lint": "esw -f simple-detail web server",
+    "lint": "esw -f simple-detail web server && npm run lint:yml",
     "lint:yml": "yamllint .travis.yml",
     "lint:ci": "npm run lint",
     "lint:watch": "nodemon  --exec npm run lint",
@@ -28,7 +28,8 @@
     "test": "karma start karma.conf.ci.js",
     "test:coverage": "karma start karma.conf.coverage.js",
     "test:sauce": "karma start karma.conf.saucelabs.js --single-run --no-auto-watch",
-    "test:watch": "karma start karma.conf.js"
+    "test:watch": "karma start karma.conf.js",
+    "test:mac": "npm run test:watch"
   },
   "homepage": "https://github.com/wpannell/ibm-cloud-garage-method-developer-bootcamp#readme",
   "repository": {
