@@ -1,14 +1,27 @@
 describe.only('the stack spec', () => {
 
-  let stack = {
-    isEmpty: () => true
+  const makeFactory = () => {
+    let stackSize = 0;
+    return {
+        isEmpty: () => stackSize === 0,
+        size: () => stackSize,
+        push: () => stackSize++
+      };
   };
 
-  it('starts empty');
+  let stack = makeFactory();
+
+  it('starts empty', () => {
+    stack.isEmpty().should.be.true();
+  });
    it('starts with stack size 0', () => {
-     stack.isEmpty().should.be.true();
+     stack.size().should.equal(0);
    });
-   it('is not be empty when pushed');
+
+   it('is not be empty when pushed', () => {
+     stack.push();
+     stack.isEmpty().should.be.false();
+   });
    it('leaves stack size 1 when pushed');
    it('leaves stack empty when pushed and popped');
    it('leaves stack size 0 when pushed and popped');
