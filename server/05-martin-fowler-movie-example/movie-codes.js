@@ -1,5 +1,5 @@
-const REGULAR = 0;
-const NEW_RELEASE = 1;
-const CHILDRENS = 2;
+const REGULAR = 'REGULAR';
+const NEW_RELEASE = 'NEW_RELEASE';
+const CHILDRENS = 'CHILDRENS';
 
 export {REGULAR, NEW_RELEASE, CHILDRENS};
