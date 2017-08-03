@@ -9,7 +9,10 @@ describe.only('tests months', () => {
   it('tests prior month', () => {
     const months = require('./months');
 
-    const priorMonth = {year: 2017, month: 7};
+    var date = new Date();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+    const priorMonth = {year: year, month: month};
 
     let priorMonthTestData = months.prior();
 
@@ -20,7 +23,10 @@ describe.only('tests months', () => {
   it('tests current month', () => {
     const months = require('./months');
 
-    const currentMonth = {year: 2017, month: 8};
+    var date = new Date();
+    var month = date.getMonth() + 1;
+    var year = date.getFullYear();
+    const currentMonth = {year: year, month: month};
 
     let currentMonthTestData = months.current();
 
