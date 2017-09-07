@@ -9,7 +9,7 @@
     "lint": "esw -f simple-detail web server",
     "precommit": "npm test",
     "prepush": "npm run precommit",
-    "spec:coverage": "nyc --reporter=lcov --reporter=text --require babel-register yarn spec",
+    "spec:coverage": "nyc --reporter=lcov --reporter=text --require babel-register npm run spec",
     "spec": "mocha --register mocha-clean --compilers js:babel-register --reporter spec --growl --recursive ./test-helper.js  server/**/*.spec.js",
     "spec:clear": "clear && npm run spec",
     "tdd": "nodemon -q 2>/dev/null --exec 'npm-run-all spec:clear lint'",
