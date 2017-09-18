@@ -1,4 +1,4 @@
-describe.only('the canary spec for stack', () => {
+describe('the canary spec for stack', () => {
   it('shows the infrastructure works', () => {
     true.should.be.true();
   });

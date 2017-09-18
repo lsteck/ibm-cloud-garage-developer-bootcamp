@@ -1,12 +1,17 @@
 /* eslint-disable no-param-reassign */
 
-describe('the prime numbers canary spec', () => {
+describe.only('the prime numbers canary spec', () => {
   it('shows the infrastructure works', () => {
     true.should.be.true();
   });
 
+  let primeFactors = () => [];
+
   describe('a prime numbers function should', () => {
-    it('return none for 1');
+    it('return none for 1', () => {
+      primeFactors(1).should.deepEqual([]);
+    });
+
     it('return 2 for 2');
     it('return 3 for 3');
     it('return 2, 2 for 4');
