@@ -1,19 +1,15 @@
 /* eslint-disable no-param-reassign */
 
-describe.only('the prime numbers canary spec', () => {
+describe('the prime numbers canary spec', () => {
   it('shows the infrastructure works', () => {
     true.should.be.true();
   });
 
   let primeFactors = (number) => {
     let factors = [];
-    if (number > 1){
-      while (number % 2 === 0){
-        factors.push(2);
-        number /= 2;
-      }
+    for (let divisor = 2; number > 1; divisor++) {
+      for (; number % divisor === 0; number /= divisor) factors.push(divisor);
     }
-    if (number > 1) factors.push(number);
     return factors;
   };
 
@@ -51,6 +47,17 @@ describe.only('the prime numbers canary spec', () => {
       primeFactors(8).should.deepEqual([2, 2, 2]);
     });
 
-    it('return 3, 3 for 9');
+    it('return 3, 3 for 9', () => {
+      primeFactors(9).should.deepEqual([3, 3]);
+    });
+
+    it('return 5, 5 for 25', () => {
+      primeFactors(25).should.deepEqual([5, 5]);
+    });
+
+    it('return 23, 1031 for 23713', () => {
+      primeFactors(23713).should.deepEqual([23, 1031]);
+    });
+
   });
 });

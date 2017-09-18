@@ -4,7 +4,7 @@ describe('the canary spec for stack', () => {
   });
 
   const stackFactory = (capacity = 2) => {
-    if(capacity < 0) throw new Error('can only accept positive capacity');
+    if (capacity < 0) throw new Error('can only accept positive capacity');
     let elements = [];
 
     const isEmpty = () => elements.length === 0;

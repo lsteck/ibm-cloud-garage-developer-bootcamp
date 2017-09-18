@@ -15,11 +15,24 @@ describe('the palindrome canary spec', () => {
        isPalindrome('radar').should.be.true();
     });
 
-    it('racecar is a palindrome', );
-    it('dog is not a palindrome');
-    it('"mom dad mom" is a palindrome');
-    it('"race car" is a palindrome');
-    it('"  " is not a palindrome');
-    it('"" is not a palindrome');
+    it('racecar is a palindrome', () => {
+       isPalindrome('racecar').should.be.true();
+    });
+
+    it('dog is not a palindrome', () => {
+       isPalindrome('dog').should.be.false();
+    });
+
+    it('"mom dad mom" is a palindrome', () => {
+       isPalindrome('mom dad mom').should.be.true();
+    });
+
+    it('"" is not a palindrome', () => {
+       isPalindrome('').should.be.false();
+    });
+
+    it('"  " is not a palindrome', () => {
+       isPalindrome('    ').should.be.false();
+    });
   });
 });
