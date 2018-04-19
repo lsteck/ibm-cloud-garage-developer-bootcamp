@@ -1,2 +1,0 @@
-describe('a palindrome function', () => {
-});
