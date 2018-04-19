@@ -16,11 +16,11 @@ stages:
         build_type: npm
         script: |-
           #!/bin/bash
-          git config --global user.email "wgpannel@us.ibm.com"
-          git config --global user.name "wil.pannell"
+          git config --global user.email "lsteck@us.ibm.com"
+          git config --global user.name "larry.steck"
 
           export NVM_DIR=/home/pipeline/nvm
-          export NODE_VERSION=v7.10.1
+          export NODE_VERSION=v8.9.4
           export NVM_VERSION=v0.33.2
           npm config delete prefix \
             && curl https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | sh \
@@ -90,11 +90,11 @@ stages:
         build_type: npm
         script: |-
           #!/bin/bash
-          git config --global user.email "wgpannel@us.ibm.com"
-          git config --global user.name "wil.pannell"
+          git config --global user.email "lsteck@us.ibm.com"
+          git config --global user.name "larry.steck"
 
           export NVM_DIR=/home/pipeline/nvm
-          export NODE_VERSION=v7.10.1
+          export NODE_VERSION=v8.9.4
           export NVM_VERSION=v0.33.2
           npm config delete prefix \
             && curl https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | sh \
@@ -170,11 +170,11 @@ stages:
         build_type: npm
         script: |-
           #!/bin/bash
-          git config --global user.email "wgpannel@us.ibm.com"
-          git config --global user.name "wil.pannell"
+          git config --global user.email "lsteck@us.ibm.com"
+          git config --global user.name "larry.steck"
 
           export NVM_DIR=/home/pipeline/nvm
-          export NODE_VERSION=v7.10.1
+          export NODE_VERSION=v8.9.4
           export NVM_VERSION=v0.33.2
           npm config delete prefix \
             && curl https://raw.githubusercontent.com/creationix/nvm/${NVM_VERSION}/install.sh | sh \
