@@ -17,7 +17,7 @@
     "precommit": "npm-run-all clear lint spec test:ci",
     "prepush": "npm run ci",
     "server:coverage": "nyc --reporter=lcov --reporter=text --require babel-register npm run spec",
-    "spec": "mocha --compilers js:babel-register --reporter spec --growl --recursive ./test-helper.js  server/**/*.spec.js",
+    "spec": "mocha --register mocha-clean --compilers js:babel-register --reporter spec --growl --recursive ./test-helper.js  server/**/*.spec.js",
     "spec:ci": "npm run server:coverage",
     "spec:clear": "clear && npm run spec",
     "spec:watch": "nodemon -q --exec npm run spec:clear || true",
@@ -47,8 +47,9 @@
   "license": "UNLICENSED",
   "private": true,
   "engines": {
-    "node": "7.10.1",
-    "npm": "4.2.0"
+    "node": "8.9.4",
+    "npm": "5.6.0",
+    "yarn": "1.5.1"
   },
   "files": [
     "dist",
@@ -127,6 +128,7 @@
     "karma-testdouble": "1.0.2",
     "karma-webpack": "1.8.0",
     "mocha": "3.2.0",
+    "mocha-clean": "1.0.0",
     "ngMockHttp": "git://github.com/bbraithwaite/ngMockHttp.git#2ee3fa8aa373d04a449bd2f695b2f819ef34dbe4",
     "node-libs-browser": "2.0.0",
     "nodemon": "1.11.0",
