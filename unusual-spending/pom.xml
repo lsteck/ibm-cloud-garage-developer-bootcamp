@@ -4,27 +4,34 @@
 
 	<parent>
 		<groupId>com.ibm.cloud.garage</groupId>
-		<artifactId>java-topic-trials</artifactId>
+		<artifactId>java-tdd-trials</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>unusual-spending</artifactId>
 	<packaging>jar</packaging>
 
-	<name>unusual-spending-kata</name>
-	<url>https://github.com/testdouble/contributing-tests/wiki</url>
+	<name>unusual-spending</name>
+	<url>https://github.com/wpannell/angular5-bootstrap-node-fast-specs</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<build>
+ 		<plugins>
+ 			<plugin>
+ 				<groupId>org.apache.maven.plugins</groupId>
+ 				<artifactId>maven-compiler-plugin</artifactId>
+ 				<configuration>
+ 					<source>1.8</source>
+ 					<target>1.8</target>
+ 				</configuration>
+ 			</plugin>
+ 		</plugins>
+ 	</build>
+
 	<dependencies>
-		<dependency>
-			<groupId>com.testdouble</groupId>
-			<artifactId>unusual-spending-vendor</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>compile</scope>
-		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

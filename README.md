@@ -13,10 +13,9 @@ java -version
 mvn -version
 #3.3.9
 
-git clone git@github.ibm.com:bluemix-enablement/bluemix-garage-developer-bootcamp.git app
+git clone git@github.com:wpannell/angular5-bootstrap-node-fast-specs.git app
 cd app
 git fetch --all
 git checkout java-tdd-trials
 mvn install
 ```
-

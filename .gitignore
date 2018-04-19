@@ -2,13 +2,14 @@ launchConfigurations/
 .DS_Store
 .idea/
 target/
-/java-refactoring-exercise.iml
+/*.iml
 /.project
 /.classpath
 
+archive/
 bower_components/
 dist/
-resources
+resources/
 /index.html
 # Logs
 logs
